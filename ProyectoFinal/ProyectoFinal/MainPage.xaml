@@ -11,6 +11,7 @@
         </Frame>
         <Frame>
             <Button Text="Crear Personaje" />
+            <Label>Probando cosas </Label>
 
 
         </Frame>
