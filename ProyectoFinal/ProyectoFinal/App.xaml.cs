@@ -11,7 +11,7 @@ namespace ProyectoFinal
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Raza();
         }
 
         protected override void OnStart()

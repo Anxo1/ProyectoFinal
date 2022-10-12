@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinal.Vistas.Raza">
+    <Grid  BackgroundColor="DarkRed" >
+        <Frame CornerRadius="20"
+               Margin="20"
+               VerticalOptions="FillAndExpand">
+            <StackLayout Margin="7"
+                         BackgroundColor="White"
+                         ClassId="razas">
+                <Picker Title="Selecciona raza"
+                        x:Name="pikerRaza"
+                        VerticalTextAlignment="Center">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Humano</x:String>
+                            <x:String>Elfo</x:String>
+                            <x:String>Enano</x:String>
+                            <x:String>Draconido</x:String>
+                            <x:String>Mediano</x:String>
+                            <x:String>Semielfo</x:String>
+                            <x:String>Tiflin</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Label Text="asdfdfsdfsdf dsfsd dsf ds sd dsfds fdsf ds fdsf sdf  sdfffffffffffffffff sdfsdffffffffsdf sdfsdsdsdsdsdsdsdsdsdsdsdsdsdfsdfsdf"
+                       BackgroundColor="AliceBlue"
+                       VerticalOptions="FillAndExpand" />
+            </StackLayout>
+        </Frame>
+        
+        
+    </Grid>
+</ContentPage>
