@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFinal.Vistas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,6 +14,11 @@ namespace ProyectoFinal
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void btnIniciar_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Raza());
         }
     }
 }

@@ -11,7 +11,9 @@
                          ClassId="razas">
                 <Picker Title="Selecciona raza"
                         x:Name="pikerRaza"
-                        VerticalTextAlignment="Center">
+                        VerticalTextAlignment="Center"
+                        SelectedIndex="0"
+                        SelectedIndexChanged="pikerRaza_SelectedIndexChanged">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Humano</x:String>
@@ -24,9 +26,14 @@
                         </x:Array>
                     </Picker.ItemsSource>
                 </Picker>
-                <Label Text="asdfdfsdfsdf dsfsd dsf ds sd dsfds fdsf ds fdsf sdf  sdfffffffffffffffff sdfsdffffffffsdf sdfsdsdsdsdsdsdsdsdsdsdsdsdsdfsdfsdf"
+                <Label x:Name="txtInfo"
+                    Text="asdfdfsdfsdf dsfsd dsf ds sd dsfds fdsf ds fdsf sdf  sdfffffffffffffffff sdfsdffffffffsdf sdfsdsdsdsdsdsdsdsdsdsdsdsdsdfsdfsdf"
                        BackgroundColor="AliceBlue"
                        VerticalOptions="FillAndExpand" />
+                <Button Text="siguiente"
+                        CornerRadius="10"
+                        FontSize="Large"
+                        Margin="0,15,0,0"/>
             </StackLayout>
         </Frame>
         

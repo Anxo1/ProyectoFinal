@@ -2,30 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoFinal.MainPage">
-    <StackLayout BackgroundColor="DarkRed">
-        <Label Text="D&amp;D 4ed Builder"
-               HorizontalTextAlignment="Center"
-               FontSize="36"
-               FontAttributes="Bold" />
-        <Frame Margin="15"
-               VerticalOptions="FillAndExpand"
-               CornerRadius="20"
-               HasShadow="False">
-            <StackLayout VerticalOptions="Center">
-                <Image Source="https://i0.wp.com/pocgamer.com/wp-content/uploads/2019/05/dungeons-dragons-clipart-5.png?ssl=1" />
-                <Button Text="Crear Personaje"
-                        BackgroundColor="DarkRed"
-                        CornerRadius="10"
-                        TextColor="GhostWhite"
-                        FontAttributes="Bold"
-                        Margin="5" />
-                <Button Text="Lista de Personajes"
-                        BackgroundColor="DarkRed"
-                        CornerRadius="10"
-                        TextColor="GhostWhite"
-                        FontAttributes="Bold"
-                        Margin="5" />
-            </StackLayout>
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="dd" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            
+           
         </Frame>
+        <Frame>
+            <Button Text="Crear Personaje" 
+                    x:Name="btnIniciar"
+                    Clicked="btnIniciar_Clicked"/>
+            
+
+
+        </Frame>
+        <Frame>
+            <Button Text="Lista de Personajes" />
+        </Frame>
+
+
     </StackLayout>
+
 </ContentPage>

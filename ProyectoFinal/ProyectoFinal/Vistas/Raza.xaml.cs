@@ -15,6 +15,13 @@ namespace ProyectoFinal.Vistas
         public Raza()
         {
             InitializeComponent();
+            pikerRaza.SelectedIndex = 0;
+            pikerRaza.SelectedItem = pikerRaza.Items.ElementAt(0);
+        }
+
+        private void pikerRaza_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtInfo.Text = pikerRaza.SelectedItem.ToString();
         }
     }
 }
