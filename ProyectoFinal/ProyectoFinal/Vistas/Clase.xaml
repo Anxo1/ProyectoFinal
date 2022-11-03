@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProyectoFinal.Vistas.Raza">
-    <Grid  BackgroundColor="DarkRed" >
+             x:Class="ProyectoFinal.Vistas.Page2">
+    <Grid  BackgroundColor="DarkRed">
         <Frame CornerRadius="20"
                Margin="20"
                VerticalOptions="FillAndExpand">
@@ -10,35 +10,33 @@
                          BackgroundColor="White"
                          ClassId="razas">
                 <Picker Title="Selecciona raza"
-                        x:Name="pikerRaza"
+                        x:Name="pikerClase"
                         VerticalTextAlignment="Center"
                         SelectedIndex="0"
-                        SelectedIndexChanged="pikerRaza_SelectedIndexChanged">
+                        SelectedIndexChanged = "pikerClase_SelectedIndexChanged">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
-                            <x:String>Humano</x:String>
-                            <x:String>Elfo</x:String>
-                            <x:String>Enano</x:String>
-                            <x:String>Draconido</x:String>
-                            <x:String>Mediano</x:String>
-                            <x:String>Semielfo</x:String>
-                            <x:String>Tiflin</x:String>
+                            <x:String>Guerrero</x:String>
+                            <x:String>Brujo</x:String>
+                            <x:String>Clerigo</x:String>
+                            <x:String>Explorador</x:String>
+                            <x:String>Mago</x:String>
+                            <x:String>Paladin</x:String>
+                            <x:String>Picaro</x:String>
+                            <x:String>Señor de la guerra</x:String>
                         </x:Array>
                     </Picker.ItemsSource>
                 </Picker>
-                
                 <Label x:Name="txtInfo"
-                    Text="asdfdfsdfsdf dsfsd dsf ds sd dsfds fdsf ds fdsf sdf  sdfffffffffffffffff sdfsdffffffffsdf sdfsdsdsdsdsdsdsdsdsdsdsdsdsdfsdfsdf"
+                       Text="asdfdfsdfsdf dsfsd dsf ds sd dsfds fdsf ds fdsf sdf  sdfffffffffffffffff sdfsdffffffffsdf sdfsdsdsdsdsdsdsdsdsdsdsdsdsdfsdfsdf"
                        BackgroundColor="AliceBlue"
-                       VerticalOptions="Fill" />
-                <Image Source="Humano.png" VerticalOptions="FillAndExpand" />
+                       VerticalOptions="FillAndExpand" />
+                
                 <Button Text="siguiente"
                         CornerRadius="10"
                         FontSize="Large"
-                        Margin="0,15,0,0"/>
+                        Margin="0,15,0,0" />
             </StackLayout>
         </Frame>
-        
-        
     </Grid>
 </ContentPage>
