@@ -10,12 +10,9 @@
            
         </Frame>
         <Frame>
-            <Button Text="Crear Personaje" 
+            <Button Text="Crear Personaje"
                     x:Name="btnIniciar"
-                    Clicked="btnIniciar_Clicked"/>
-            
-
-
+                    Clicked="btnIniciar_Clicked" />
         </Frame>
         <Frame>
             <Button Text="Lista de Personajes" />

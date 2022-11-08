@@ -1,19 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProyectoFinal.Vistas.Raza">
-    <Grid  BackgroundColor="DarkRed" >
+             x:Class="ProyectoFinal.Vistas.Raza"
+             >
+    <Grid    x:Name="gridRaza" >
+        <Image Source="Humano.png"
+               x:Name="imageRaza"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               Aspect="AspectFill" />
         <Frame CornerRadius="20"
-               Margin="20"
-               VerticalOptions="FillAndExpand">
-            <StackLayout Margin="7"
-                         BackgroundColor="White"
-                         ClassId="razas">
+               Margin="15"
+               VerticalOptions="FillAndExpand"
+               BackgroundColor="#38FFFFFF"
+              >
+            <StackLayout Margin="0"
+                         
+                         BackgroundColor="#00710707"
+                         ClassId="razas"  >
                 <Picker Title="Selecciona raza"
                         x:Name="pikerRaza"
                         VerticalTextAlignment="Center"
                         SelectedIndex="0"
-                        SelectedIndexChanged="pikerRaza_SelectedIndexChanged">
+                        SelectedIndexChanged="pikerRaza_SelectedIndexChanged" Visual="Material">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Humano</x:String>
@@ -23,15 +32,23 @@
                             <x:String>Mediano</x:String>
                             <x:String>Semielfo</x:String>
                             <x:String>Tiflin</x:String>
+                            <x:String>Eladrines</x:String>
                         </x:Array>
                     </Picker.ItemsSource>
                 </Picker>
                 
                 <Label x:Name="txtInfo"
-                    Text="asdfdfsdfsdf dsfsd dsf ds sd dsfds fdsf ds fdsf sdf  sdfffffffffffffffff sdfsdffffffffsdf sdfsdsdsdsdsdsdsdsdsdsdsdsdsdfsdfsdf"
-                       BackgroundColor="AliceBlue"
-                       VerticalOptions="Fill" />
-                <Image Source="Humano.png" VerticalOptions="FillAndExpand" />
+                       Text=""
+                       BackgroundColor="#4CFFFFFF"
+                       TextColor="Black"
+                       VerticalOptions="FillAndExpand"
+                       FontSize="Body"
+                       Visual="Material">
+                    <Label.Background>
+                        
+                        
+                    </Label.Background>
+                </Label>
                 <Button Text="siguiente"
                         CornerRadius="10"
                         FontSize="Large"
