@@ -36,23 +36,24 @@
                         </x:Array>
                     </Picker.ItemsSource>
                 </Picker>
+                <ScrollView VerticalOptions="FillAndExpand">
+                    <Label x:Name="txtInfo"
+                           Text=""
+                           BackgroundColor="#4CFFFFFF"
+                           TextColor="Black"
+                           VerticalOptions="FillAndExpand"
+                           FontSize="Body"
+                           Visual="Material">
+                        <Label.Background></Label.Background>
+                    </Label>
+                </ScrollView>
                 
-                <Label x:Name="txtInfo"
-                       Text=""
-                       BackgroundColor="#4CFFFFFF"
-                       TextColor="Black"
-                       VerticalOptions="FillAndExpand"
-                       FontSize="Body"
-                       Visual="Material">
-                    <Label.Background>
-                        
-                        
-                    </Label.Background>
-                </Label>
                 <Button Text="siguiente"
                         CornerRadius="10"
                         FontSize="Large"
-                        Margin="0,15,0,0"/>
+                        Margin="0,15,0,0"
+                        x:Name="btnSiguiente"
+                        Clicked="btnSiguiente_Clicked"/>
             </StackLayout>
         </Frame>
         

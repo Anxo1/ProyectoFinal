@@ -1,19 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProyectoFinal.Vistas.Page2">
-    <Grid  BackgroundColor="DarkRed">
+             x:Class="ProyectoFinal.Vistas.Clase">
+    <Grid    x:Name="gridRaza">
+        <Image Source="Guerrero.png"
+               x:Name="imageClase"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               Aspect="AspectFill" />
         <Frame CornerRadius="20"
-               Margin="20"
-               VerticalOptions="FillAndExpand">
-            <StackLayout Margin="7"
-                         BackgroundColor="White"
-                         ClassId="razas">
-                <Picker Title="Selecciona raza"
+               Margin="15"
+               VerticalOptions="FillAndExpand"
+               BackgroundColor="#33ADADAD">
+            <StackLayout Margin="0"
+                         BackgroundColor="#00710707"
+                         ClassId="clases">
+                <Picker Title="Selecciona clase"
                         x:Name="pikerClase"
                         VerticalTextAlignment="Center"
                         SelectedIndex="0"
-                        SelectedIndexChanged = "pikerClase_SelectedIndexChanged">
+                        SelectedIndexChanged="pikerClase_SelectedIndexChanged"
+                        Visual="Material">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Guerrero</x:String>
@@ -27,15 +34,25 @@
                         </x:Array>
                     </Picker.ItemsSource>
                 </Picker>
-                <Label x:Name="txtInfo"
-                       Text="asdfdfsdfsdf dsfsd dsf ds sd dsfds fdsf ds fdsf sdf  sdfffffffffffffffff sdfsdffffffffsdf sdfsdsdsdsdsdsdsdsdsdsdsdsdsdfsdfsdf"
-                       BackgroundColor="AliceBlue"
-                       VerticalOptions="FillAndExpand" />
+                <ScrollView VerticalOptions="FillAndExpand">
+                    <Label x:Name="txtInfo"
+                       Text=""
+                       BackgroundColor="#4CFFFFFF"
+                       TextColor="Black"
+                       VerticalOptions="FillAndExpand"
+                       FontSize="Body"
+                       Visual="Material">
+                    <Label.Background></Label.Background>
+                    
+                </Label>
+                </ScrollView>
                 
                 <Button Text="siguiente"
                         CornerRadius="10"
                         FontSize="Large"
-                        Margin="0,15,0,0" />
+                        Margin="0,15,0,0"
+                        x:Name="btnSiguiente"
+                        Clicked="btnSiguiente_Clicked" />
             </StackLayout>
         </Frame>
     </Grid>

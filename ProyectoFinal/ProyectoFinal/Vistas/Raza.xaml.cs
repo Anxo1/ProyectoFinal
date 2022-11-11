@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using ProyectoFinal.Vistas;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,6 +19,7 @@ namespace ProyectoFinal.Vistas
             NavigationPage.SetHasNavigationBar(this, false);
             pikerRaza.SelectedIndex = 0;
             pikerRaza.SelectedItem = pikerRaza.Items.ElementAt(0);
+
             //imageRaza.Source = ImageSource.FromFile("Humano.png");
             //imageRaza.IsVisible = false;
             
@@ -84,6 +85,12 @@ namespace ProyectoFinal.Vistas
                 default:
                     break;
             }
+        }
+
+        private void btnSiguiente_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Clase());
+
         }
     }
 }
