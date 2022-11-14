@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinal.Vistas.PersonajeFinal">
+    <ContentPage.Content>
+        <Grid  RowDefinitions="*,50">
+            <ScrollView Grid.Row="0">
+                <Grid ColumnDefinitions="*,*"
+                      RowDefinitions="55,Auto">
+                  
+                    <Entry Grid.ColumnSpan="2"
+                           Grid.Row="0"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Center"
+                           FontSize="Title" 
+                           Text="Nombre del personaje"/>
+                    <Grid Grid.Row="1"
+                          Grid.Column="1">
+                        <Frame CornerRadius="20">
+                            <StackLayout HorizontalOptions="Center">
+                                <Label Text="Defensas"
+                                       FontAttributes="Bold"
+                                       FontSize="16"
+                                       HorizontalOptions="Center" />
+                                <Label Text="CA: 0"
+                                      x:Name="defensaCA"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Fortaleza: 0"
+                                       x:Name="defensaFortaleza"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Reflejos: 0"
+                                       x:Name="defensaRefeljos"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Voluntad: 0"
+                                       x:Name="defensaVoluntad"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Habilidades"
+                                       FontAttributes="Bold"
+                                       FontSize="16"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Acrobacias: 0"
+                                       x:Name="habilidadesaAcrobacias"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Aguante: 0"
+                                       x:Name="habilidadesaAguante"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Arcanos: 0"
+                                       x:Name="habilidadesArcanos"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Atletismo: 0"
+                                       x:Name="habilidadesaAtletismo"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Diplomacia: 0"
+                                       x:Name="habilidadesaDiplomacia"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Dungeus: 0"
+                                       x:Name="habilidadesaDungeos"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Engañar: 0"
+                                       x:Name="habilidadesEngañar"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Historia: 0"
+                                       x:Name="habilidadesaHistoria"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Hurto: 0"
+                                       x:Name="habilidadesHurto"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Intimidar: 0"
+                                       x:Name="habilidadesIntimidar"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Naturaleza: 0"
+                                       x:Name="habilidadesNaturaleza"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Percepcion: 0"
+                                       x:Name="habilidadesaPercepcion"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Perpicacia: 0"
+                                       x:Name="habilidadesaPerpicacia"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Recursos: 0"
+                                       x:Name="habilidadesaRecursos"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Religion: 0"
+                                       x:Name="habilidadesaReligion"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Sanar: 0"
+                                       x:Name="habilidadesSanar"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Sigilo: 0"
+                                       x:Name="habilidadesaSigilo"
+                                       FontSize="15"
+                                       HorizontalOptions="Center" />
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                    <Grid VerticalOptions="FillAndExpand"
+                                Grid.Column="0"
+                                Grid.Row="1"
+                         
+                         >
+                        <Frame CornerRadius="20" >
+                            <StackLayout Spacing="0">
+                                <Label Text="Fuerza"
+                                       FontAttributes="Bold"
+                                       FontSize="16"
+                                       HorizontalOptions="Center" />
+                                <Label  Text="0"
+                                        x:Name="puntuacionFuerza"
+                                        FontSize="28"
+                                        HorizontalOptions="Center" />
+                                <Label  Text="mod: 0"
+                                        x:Name="modificadorFuerza"
+                                        FontSize="16"
+                                        HorizontalOptions="Center" />
+                                <Label Text="Contitucion"
+                                       FontAttributes="Bold"
+                                       FontSize="16"
+                                       HorizontalOptions="Center" />
+                                <Label  Text="0"
+                                        x:Name="puntuacionContitucion"
+                                        FontSize="28"
+                                        HorizontalOptions="Center" />
+                                <Label  Text="mod: 0"
+                                        x:Name="modificadorContitucion"
+                                        FontSize="16"
+                                        HorizontalOptions="Center" />
+                                <Label Text="Destreza"
+                                       FontAttributes="Bold"
+                                       FontSize="16"
+                                       HorizontalOptions="Center" />
+                                <Label  Text="0"
+                                        x:Name="puntuacionDestreza"
+                                        FontSize="28"
+                                        HorizontalOptions="Center" />
+                                <Label  Text="mod: 0"
+                                        x:Name="modificadorDestreza"
+                                        FontSize="16"
+                                        HorizontalOptions="Center" />
+                                <Label Text="Inteligencia"
+                                       FontAttributes="Bold"
+                                       FontSize="16"
+                                       HorizontalOptions="Center" />
+                                <Label  Text="0"
+                                        x:Name="puntuacionInteligencia"
+                                        FontSize="28"
+                                        HorizontalOptions="Center" />
+                                <Label  Text="mod: 0"
+                                        x:Name="modificadorInteligencia"
+                                        FontSize="16"
+                                        HorizontalOptions="Center" />
+                                <Label Text="Sabiduria"
+                                       FontAttributes="Bold"
+                                       FontSize="16"
+                                       HorizontalOptions="Center" />
+                                <Label  Text="0"
+                                        x:Name="puntuacionSabiduria"
+                                        FontSize="28"
+                                        HorizontalOptions="Center" />
+                                <Label  Text="mod: 0"
+                                        x:Name="modificadorSabiduria"
+                                        FontSize="16"
+                                        HorizontalOptions="Center" />
+                                <Label Text="Carisma"
+                                       FontAttributes="Bold"
+                                       FontSize="16"
+                                       HorizontalOptions="Center" />
+                                <Label  Text="0"
+                                        x:Name="puntuacionCarisma"
+                                        FontSize="28"
+                                        HorizontalOptions="Center" />
+                                <Label  Text="mod: 0"
+                                        x:Name="modificadorCarisma"
+                                        FontSize="16"
+                                        HorizontalOptions="Center" />
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                </Grid>
+            </ScrollView>
+            <Button Text="Guardar" Grid.Row="1"/>
+        </Grid>
+       
+        
+    </ContentPage.Content>
+</ContentPage>

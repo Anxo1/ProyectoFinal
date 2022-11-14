@@ -78,6 +78,7 @@ namespace ProyectoFinal.Vistas
 
         private void btnSiguiente_Clicked(object sender, EventArgs e)
         {
+            Navigation.PushAsync(new PersonajeFinal());
 
         }
     }

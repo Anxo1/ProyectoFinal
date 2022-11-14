@@ -14,6 +14,7 @@ namespace ProyectoFinal
         public MainPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private void btnIniciar_Clicked(object sender, EventArgs e)
