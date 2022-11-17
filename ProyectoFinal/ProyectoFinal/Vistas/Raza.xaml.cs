@@ -89,7 +89,7 @@ namespace ProyectoFinal.Vistas
 
         private void btnSiguiente_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Clase());
+            Navigation.PushAsync(new Clase2(raza));
 
         }
     }

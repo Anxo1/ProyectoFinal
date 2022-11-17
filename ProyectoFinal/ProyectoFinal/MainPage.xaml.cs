@@ -21,5 +21,15 @@ namespace ProyectoFinal
         {
             Navigation.PushAsync(new Raza());
         }
+
+        private void btnLista_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ListaPersonajes());
+        }
+
+        private void btnSalir_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

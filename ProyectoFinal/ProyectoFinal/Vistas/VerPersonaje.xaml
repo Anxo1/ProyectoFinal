@@ -1,21 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProyectoFinal.Vistas.PersonajeFinal">
+             x:Class="ProyectoFinal.Vistas.VerPersonaje">
     <ContentPage.Content>
         <Grid  RowDefinitions="*,50">
             <ScrollView Grid.Row="0">
                 <Grid ColumnDefinitions="*,*"
                       RowDefinitions="55,Auto">
-                  
-                    <Entry Grid.ColumnSpan="2"
+                    <Label Grid.ColumnSpan="2"
                            Grid.Row="0"
                            x:Name="txtNombre"
-                           HorizontalOptions="FillAndExpand"
+                           HorizontalOptions="CenterAndExpand"
                            VerticalOptions="Center"
-                           FontSize="Title" 
-                           Text="Nombre del personaje"
-                           />
+                           FontSize="Title"
+                           Text="Nombre del personaje" />
                     <Grid Grid.Row="1"
                           Grid.Column="1">
                         <Frame CornerRadius="20">
@@ -25,7 +23,7 @@
                                        FontSize="16"
                                        HorizontalOptions="Center" />
                                 <Label Text="CA: 0"
-                                      x:Name="defensaCA"
+                                       x:Name="defensaCA"
                                        FontSize="15"
                                        HorizontalOptions="Center" />
                                 <Label Text="Fortaleza: 0"
@@ -116,11 +114,9 @@
                         </Frame>
                     </Grid>
                     <Grid VerticalOptions="FillAndExpand"
-                                Grid.Column="0"
-                                Grid.Row="1"
-                         
-                         >
-                        <Frame CornerRadius="20" >
+                          Grid.Column="0"
+                          Grid.Row="1">
+                        <Frame CornerRadius="20">
                             <StackLayout Spacing="0">
                                 <Label Text="Fuerza"
                                        FontAttributes="Bold"
@@ -199,9 +195,10 @@
                     </Grid>
                 </Grid>
             </ScrollView>
-            <Button Text="Guardar" Clicked="btnGuardar_Clicked" Grid.Row="1" x:Name="btnGuardar" />
+            <Button Text="Volver"
+                    Clicked="btnVolver_Clicked"
+                    Grid.Row="1"
+                    x:Name="btnVolver" />
         </Grid>
-       
-        
     </ContentPage.Content>
 </ContentPage>

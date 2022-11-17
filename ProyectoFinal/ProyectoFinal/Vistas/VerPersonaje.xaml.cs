@@ -1,5 +1,4 @@
-﻿using ProyectoFinal.Data;
-using ProyectoFinal.Modelos;
+﻿using ProyectoFinal.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,62 +8,45 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using SQLite;
+using ProyectoFinal.Data;
 using System.IO;
+using ProyectoFinal.Modelos;
 
 namespace ProyectoFinal.Vistas
-
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PersonajeFinal : ContentPage
+    public partial class VerPersonaje : ContentPage
     {
-        private string raza;
-        private string clase;
         Personajes personaje;
         static SQLiteHelper db;
-
-       
-
-        public PersonajeFinal(string raza, string clase)
+        int idJugador;
+        public VerPersonaje(int id)
         {
             InitializeComponent();
+            this.idJugador = id;
             NavigationPage.SetHasNavigationBar(this, false);
-            this.raza = raza;
-            this.clase = clase;
             crearPersonaje();
-        }
-        public static SQLiteHelper SQLiteDB 
-        {
-            get
-            {
-                if (db == null)
-                {
-                    db = new SQLiteHelper(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"Personajes.db3"));
-                }
-                return db;
-
-            }
         }
 
         void crearPersonaje()
         {
-           personaje =  new Personajes();
-            personaje = personaje.crearPersonaje(raza,clase);
-            personaje.raza = raza;
-            personaje.clase = clase;
+            Personajes personaje = SQLiteDB.GetPersonajeByIdAync(idJugador).Result;
+           
+           txtNombre.Text = personaje.name+" - "+personaje.clase + " "+personaje.raza;
             puntuacionFuerza.Text = personaje.Fuerza.ToString();
-            puntuacionContitucion.Text= personaje.Contitucion.ToString();
-            puntuacionCarisma.Text = personaje.Carisma.ToString(); 
+            puntuacionContitucion.Text = personaje.Contitucion.ToString();
+            puntuacionCarisma.Text = personaje.Carisma.ToString();
             puntuacionDestreza.Text = personaje.Destreza.ToString();
             puntuacionInteligencia.Text = personaje.Inteligencia.ToString();
             puntuacionSabiduria.Text = personaje.Sabiduria.ToString();
-            defensaCA.Text = "CA: "+ personaje.Ca.ToString();
+            defensaCA.Text = "CA: " + personaje.Ca.ToString();
             defensaFortaleza.Text = "Fortaleza: " + personaje.Fortaleza.ToString();
-            defensaRefeljos.Text= "Reflejos: " + personaje.Refejos.ToString();
-            defensaVoluntad.Text = "Voluntad: " + personaje.Voluntad.ToString();   
+            defensaRefeljos.Text = "Reflejos: " + personaje.Refejos.ToString();
+            defensaVoluntad.Text = "Voluntad: " + personaje.Voluntad.ToString();
             habilidadesaAcrobacias.Text = "Acrobacias: " + personaje.Acrobacias.ToString();
             habilidadesaAguante.Text = "Aguante: " + personaje.Aguante.ToString();
             habilidadesaAtletismo.Text = "Atletismo: " + personaje.Atletismo.ToString();
-            habilidadesaDiplomacia.Text = "Diplomacia: " + personaje.Diplomacia.ToString(); 
+            habilidadesaDiplomacia.Text = "Diplomacia: " + personaje.Diplomacia.ToString();
             habilidadesaDungeos.Text = "Dungeos: " + personaje.Dungeos.ToString();
             habilidadesaHistoria.Text = "Historia: " + personaje.Historia.ToString();
             habilidadesaPercepcion.Text = "Percepcion: " + personaje.Percepcion.ToString();
@@ -87,13 +69,13 @@ namespace ProyectoFinal.Vistas
 
 
         }
-       private string crearModificador(int puntuacion)
+        private string crearModificador(int puntuacion)
         {
-            if (puntuacion ==1)
+            if (puntuacion == 1)
             {
                 return "-5";
             }
-            else if (puntuacion>= 2 && puntuacion <=3)
+            else if (puntuacion >= 2 && puntuacion <= 3)
             {
                 return "-4";
             }
@@ -131,7 +113,7 @@ namespace ProyectoFinal.Vistas
             }
             else if (puntuacion >= 20 && puntuacion <= 21)
             {
-                return  "5";
+                return "5";
             }
             else if (puntuacion >= 22 && puntuacion <= 23)
             {
@@ -149,7 +131,7 @@ namespace ProyectoFinal.Vistas
             {
                 return "9";
             }
-            else if(puntuacion >= 30 && puntuacion <= 31)
+            else if (puntuacion >= 30 && puntuacion <= 31)
             {
                 return "10";
             }
@@ -161,26 +143,24 @@ namespace ProyectoFinal.Vistas
             {
                 return "";
             }
-           
+
+        }
+        public static SQLiteHelper SQLiteDB
+        {
+            get
+            {
+                if (db == null)
+                {
+                    db = new SQLiteHelper(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Personajes.db3"));
+                }
+                return db;
+
+            }
         }
 
-        private async void btnGuardar_Clicked(object sender, EventArgs e)
+        private void btnVolver_Clicked(object sender, EventArgs e)
         {
-            //comprobar que el nombre este puesto
-            if (!string.IsNullOrEmpty(txtNombre.Text) )
-            {
-                personaje.name = txtNombre.Text;
-
-                await PersonajeFinal.SQLiteDB.SavePersonajeAsync(personaje);
-                await DisplayAlert("Registro", "Se guardo de manera exitosa el personaje", "Ok");
-                
-
-            }
-            else
-            {
-                //si esta vacio advertir al ususarios
-                await DisplayAlert("Advertencia", "Ingresa el nombre del personaje", "Ok");
-            }
+            Navigation.PushAsync(new ListaPersonajes());
         }
     }
 }

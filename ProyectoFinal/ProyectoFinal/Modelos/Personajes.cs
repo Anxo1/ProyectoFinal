@@ -1,11 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using SQLite;
 
 namespace ProyectoFinal.Modelos
 {
-    class Personajes
+   public class Personajes
     {
+        [PrimaryKey,AutoIncrement]
+        public int id { get;set; }
+        [MaxLength(50)]
+        public string name { get;set; }
+        [MaxLength(50)]
+        public string clase { get; set; }
+        [MaxLength(50)]
+        public string raza { get; set; }
+
+
         string Informacion = "";
         //Puntuacion de caracteristicas
         int fuerza = 0;
@@ -40,8 +51,40 @@ namespace ProyectoFinal.Modelos
         int recursos = 0;
         int sigilo = 0;
         int religion = 0;
+        int hurto=0;
 
-        Personajes crearPersonaje(string raza, string clase)
+        public int Fuerza { get => fuerza; set => fuerza = value; }
+        public int Contitucion { get => contitucion; set => contitucion = value; }
+        public int Destreza { get => destreza; set => destreza = value; }
+        public int Inteligencia { get => inteligencia; set => inteligencia = value; }
+        public int Sabiduria { get => sabiduria; set => sabiduria = value; }
+        public int Carisma { get => carisma; set => carisma = value; }
+        public int Fortaleza { get => fortaleza; set => fortaleza = value; }
+        public int Refejos { get => refejos; set => refejos = value; }
+        public int Voluntad { get => voluntad; set => voluntad = value; }
+        public int Puntos_de_golpe { get => puntos_de_golpe; set => puntos_de_golpe = value; }
+        public int Ca { get => ca; set => ca = value; }
+        public string Armadura { get => armadura; set => armadura = value; }
+        public int Atletismo { get => atletismo; set => atletismo = value; }
+        public int Resistencia { get => resistencia; set => resistencia = value; }
+        public int Sanar { get => sanar; set => sanar = value; }
+        public int Intimidar { get => intimidar; set => intimidar = value; }
+        public int Acrobacias { get => acrobacias; set => acrobacias = value; }
+        public int Aguante { get => aguante; set => aguante = value; }
+        public int Arcanos { get => arcanos; set => arcanos = value; }
+        public int Diplomacia { get => diplomacia; set => diplomacia = value; }
+        public int Dungeos { get => dungeos; set => dungeos = value; }
+        public int Engañar { get => engañar; set => engañar = value; }
+        public int Historia { get => historia; set => historia = value; }
+        public int Naturaleza { get => naturaleza; set => naturaleza = value; }
+        public int Percepcion { get => percepcion; set => percepcion = value; }
+        public int Perpicacia { get => perpicacia; set => perpicacia = value; }
+        public int Recursos { get => recursos; set => recursos = value; }
+        public int Sigilo { get => sigilo; set => sigilo = value; }
+        public int Religion { get => religion; set => religion = value; }
+        public int Hurto { get => hurto; set => hurto = value; }
+
+        public Personajes crearPersonaje(string raza, string clase)
         {
             Personajes personaje = new Personajes();
             switch (raza)
@@ -85,6 +128,7 @@ namespace ProyectoFinal.Modelos
                             personaje.recursos = 2;
                             personaje.religion = 8;
                             personaje.sigilo = 2;
+                            
                             break;
                         case "Clerigo":
                             break;
@@ -94,7 +138,7 @@ namespace ProyectoFinal.Modelos
                             //HUMANO GUERERO
                             personaje.Informacion = "";
                             //Puntuacion de caracteristicas
-                            personaje.fuerza = 16;
+                            personaje.Fuerza = 16;
                             personaje.contitucion = 16;
                             personaje.destreza = 10;
                             personaje.inteligencia = 12;
@@ -137,6 +181,10 @@ namespace ProyectoFinal.Modelos
                         case "Señor de la guerra":
                             break;
                         default:
+                            personaje.Informacion = "";
+                            //Puntuacion de caracteristicas
+                            personaje.Fuerza = 69;
+                            return personaje;
                             break;
                     }
                     break;
