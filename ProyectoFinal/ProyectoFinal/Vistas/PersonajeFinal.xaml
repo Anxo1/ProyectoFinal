@@ -14,7 +14,8 @@
                            HorizontalOptions="FillAndExpand"
                            VerticalOptions="Center"
                            FontSize="Title" 
-                           Text="Nombre del personaje"
+                           
+                           Placeholder="Nombre del personaje"
                            />
                     <Grid Grid.Row="1"
                           Grid.Column="1">
@@ -199,7 +200,7 @@
                     </Grid>
                 </Grid>
             </ScrollView>
-            <Button Text="Guardar" Clicked="btnGuardar_Clicked" Grid.Row="1" x:Name="btnGuardar" />
+            <Button Text="Guardar" Clicked="btnGuardar_Clicked" Grid.Row="1" x:Name="btnGuardar" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  CornerRadius="20" Margin="5"/>
         </Grid>
        
         

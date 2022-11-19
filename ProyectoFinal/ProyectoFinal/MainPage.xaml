@@ -4,16 +4,21 @@
              x:Class="ProyectoFinal.MainPage" BackgroundColor="Beige">
     <Frame Padding="0"
            Margin="20"
-           BackgroundColor="AliceBlue"
+           BackgroundColor="#F2F2C9"
            CornerRadius="25">
         <StackLayout 
-                    
                      HorizontalOptions="FillAndExpand"
                      VerticalOptions="FillAndExpand">
             <Image Source="ddLogo.png"
                    HorizontalOptions="Center"
                    VerticalOptions="CenterAndExpand" />
-            <Frame BackgroundColor="Aqua"
+            <Label Text="Builder"
+                   FontSize="Title"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Margin="0"
+                   Padding="0"/>
+            <Frame BackgroundColor="Beige"
                    Padding="0"
                    HorizontalOptions="FillAndExpand"
                    VerticalOptions="CenterAndExpand"
@@ -27,13 +32,14 @@
                         BorderWidth="0"
                         BackgroundColor="Transparent" />
             </Frame>
-            <Frame BackgroundColor="Aqua"
+            <Frame BackgroundColor="Beige"
                    Padding="0"
                    HorizontalOptions="FillAndExpand"
                    VerticalOptions="CenterAndExpand"
                    Margin="50,10,50,10"
                    CornerRadius="20">
                 <Button  Text="Lista de personaje"
+                         
                          x:Name="btnLista"
                          Clicked="btnLista_Clicked"
                          HorizontalOptions="FillAndExpand"
@@ -41,7 +47,7 @@
                          BorderWidth="0"
                          BackgroundColor="Transparent" />
             </Frame>
-            <Frame BackgroundColor="Aqua"
+            <Frame BackgroundColor="Beige"
                    Padding="0"
                    HorizontalOptions="FillAndExpand"
                    VerticalOptions="CenterAndExpand"

@@ -173,7 +173,8 @@ namespace ProyectoFinal.Vistas
 
                 await PersonajeFinal.SQLiteDB.SavePersonajeAsync(personaje);
                 await DisplayAlert("Registro", "Se guardo de manera exitosa el personaje", "Ok");
-                
+                Navigation.PushAsync(new MainPage());
+
 
             }
             else

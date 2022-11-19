@@ -1,11 +1,14 @@
 ﻿using ProyectoFinal.Vistas;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
 
 namespace ProyectoFinal
 {
@@ -29,6 +32,7 @@ namespace ProyectoFinal
 
         private void btnSalir_Clicked(object sender, EventArgs e)
         {
+            System.Environment.Exit(0);
 
         }
     }

@@ -2,50 +2,58 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoFinal.Vistas.ListaPersonajes">
-    <ContentPage.Content>
-        <StackLayout>
-            
-            <Frame>
+    <ContentPage.Content >
+        <StackLayout BackgroundColor="Beige">
+            <Frame BackgroundColor="#F3F3A5" Margin="15" CornerRadius="20">
                 <ListView x:Name="lstJugadores" ItemSelected="lstJugadores_ItemSelected" >
-                    <ListView.ItemTemplate>
+                    <ListView.ItemTemplate >
                         <DataTemplate >
                             <ViewCell   >
-                                <Grid BackgroundColor="Red" >
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="auto" />
-                                        
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="*" />
-                                       
-                                    </Grid.ColumnDefinitions>
-                                    <Label Text="{Binding name}"
+                                
+                                    <Grid BackgroundColor="Beige" Margin="3" Padding="10">
+                                   
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="{Binding name}"
+                                               VerticalOptions="CenterAndExpand"
+                                               Grid.Row="0"
+                                               Grid.Column="0"
+                                               TextColor="Black"
+                                                />
+                                        <Label Text="{Binding raza}"
+                                           VerticalOptions="CenterAndExpand"
                                            Grid.Row="0"
-                                           Grid.Column="0"
-                                           TextColor="White" />
-                                    <Label Text="{Binding raza}"
+                                               Grid.Column="1"
+                                               TextColor="Black" />
+                                        <Label Text="{Binding clase}"
+                                           VerticalOptions="CenterAndExpand"
                                            Grid.Row="0"
-                                           Grid.Column="1"
-                                           TextColor="White" />
-                                    <Label Text="{Binding clase}"
-                                           Grid.Row="0"
-                                           Grid.Column="2"
-                                           TextColor="White" />
-                                    <Label Text="{Binding id}"
-                                           x:Name="txtId"
-                                           
-                                           IsVisible="False"/>
-                                    
-                                </Grid>
+                                               Grid.Column="2"
+                                               TextColor="Black" />
+                                        <Label Text="{Binding id}"
+                                               x:Name="txtId"
+                                               IsVisible="False" />
+                                    </Grid>
+                                
+                               
                             </ViewCell>
                         </DataTemplate>
                         
                     </ListView.ItemTemplate>
                 </ListView>
             </Frame>
-            <Button x:Name="btnVolver" Text="Volver"  Clicked="Button_Clicked"/>
+            <Button x:Name="btnVolver"
+                    Text="Volver"
+                    Clicked="Button_Clicked"
+                    CornerRadius="20"
+                    BackgroundColor="#F3F3A5" 
+                    Margin="20,5,20,20" BorderColor="AliceBlue"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
