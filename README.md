@@ -23,6 +23,7 @@ personajes de la 4º edicion de d&d
 ## Tecnologias utilizadas
 * C#
 * Xamarin Forms
+* SQLite
 
 ## Subidas
 - Creacion del proyecto
