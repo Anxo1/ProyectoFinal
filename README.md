@@ -17,7 +17,7 @@
 
 
 
-D&D Builder es una plaicacion de android cuya funcion es crear y guardar 
+D&D Builder es una aplicacion de android cuya funcion es crear y guardar 
 personajes de la 4º edicion de d&d
 
 ## Tecnologias utilizadas
