@@ -26,13 +26,14 @@ personajes de la 4º edicion de d&d
 * SQLite
 
 ## Subidas
-- Creacion del proyecto
-- Creacion del la pantalla principal
-- Creacion de la pantalla razas
-- Cambios en la pantalla raza
-- Cambios en la pantalla raza
-- Pantalla raza terminada
-- Creacion de la pantalla Clase y terminada
-- Creacion de la pantalla Personaje final
-- Creacion de la pantalla ListaJugadores y VerJugador
-- clase personajes terminada
+- [07/10/2022]Creacion del proyecto
+- [10/10/2022]Creacion del la pantalla principal
+- [12/10/2022]Creacion de la pantalla razas
+- [19/10/2022]Cambios en la pantalla raza y pantalla principal
+- [03/11/2022]Cambios en la pantalla raza, creacion de la clase Personajes y creacion de la clase Clase
+- [08/11/2022]Se añadieron las imajenes que apareceran en la pantalla Raza y se termino
+- [11/11/2022]Cambios en la pantalla Clase y terminada
+- [14/11/2022]Creacion de la pantalla Personaje final
+- [17/11/2022]Creacion de la pantalla ListaJugadores, VerJugador y SQLiteHelper(Todas terminadas)
+- [19/11/2022]Se añadio las imagenes que aparecen en la pantalla Clase, se añadio toda la informacion a la clase Personajes, se modifico el aspecto de la pantalla pricipal, Verjugador y ListaJugadores
+- [19/11/2022]Se añadio el logo a la aplicacion
