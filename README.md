@@ -25,7 +25,7 @@ personajes de la 4º edicion de d&d
 * Xamarin Forms
 * SQLite
 
-## Subidas
+## Commits
 - [07/10/2022]Creacion del proyecto
 - [10/10/2022]Creacion del la pantalla principal
 - [12/10/2022]Creacion de la pantalla razas
